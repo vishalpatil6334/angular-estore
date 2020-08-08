@@ -1,0 +1,133 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "contact": "2654455655"
+    },
+    {
+      "id": 2,
+      "name": "bony",
+      "email": "bony@gmail.com",
+      "contact": "235455445445"
+    },
+    {
+      "id": 3,
+      "name": "kalpana",
+      "email": "kalpana@gmail.com",
+      "contact": "456655122"
+    },
+    {
+      "id": 4,
+      "name": "Vaibhav",
+      "email": "vaibhav@gmail.com",
+      "contact": "785264553"
+    }
+  ],
+  "teacher": [
+    {
+      "id": 1,
+      "name": "Tushar",
+      "email": "tushar@gmail.com",
+      "subject": "English",
+      "contact": 952145687
+    },
+    {
+      "id": 2,
+      "name": "John",
+      "email": "John@gmail.com",
+      "subject": "Marathi",
+      "contact": 9521456856
+    },
+    {
+      "id": 3,
+      "name": "Rajesh",
+      "email": "rajesh@gmail.com",
+      "subject": "Hindi",
+      "contact": 95214568545
+    },
+    {
+      "id": 4,
+      "name": "om",
+      "email": "om@gmail.com",
+      "subject": "hindi",
+      "contact": 952145687564
+    },
+    {
+      "id": 5,
+      "name": "Rupesh",
+      "email": "rupesh@gmail.com",
+      "subject": "Marathi",
+      "contact": 95214568754
+    },
+    {
+      "id": 6,
+      "name": "prashant",
+      "email": "prashant@gmail.com",
+      "contact": "4562488888",
+      "subject": "histy"
+    },
+    {
+      "id": 7,
+      "name": "pankaj",
+      "email": "pankaj@gmail.com",
+      "contact": "456522144555",
+      "subject": "math"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "subject": "Physics",
+      "auther": "Amol"
+    },
+    {
+      "id": 2,
+      "subject": "Math",
+      "auther": "Akshay"
+    },
+    {
+      "id": 3,
+      "subject": "Science",
+      "auther": "Rahul"
+    },
+    {
+      "id": 4,
+      "subject": "Histry",
+      "auther": "Bony"
+    }
+  ],
+  "registration": [
+    {
+      "id": 1,
+      "name": "ganesh",
+      "email": "ganesh@gmail.com",
+      "contact": "ganesh",
+      "password": "ganesh"
+    },
+    {
+      "id": 2,
+      "name": "rahul",
+      "email": "rahul@gmail.com",
+      "contact": "3541265455",
+      "password": "45621257"
+    }
+  ],
+  "login": [
+    {
+      "id": 1,
+      "name": "ganesh",
+      "email": "ganesh@gmail.com",
+      "contact": "ganesh",
+      "password": "ganesh"
+    },
+    {
+      "id": 2,
+      "name": "rahul",
+      "email": "rahul@gmail.com",
+      "contact": "3541265455",
+      "password": "45621257"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+<mat-toolbar class="example-header">
+
+    <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="sidenav.toggle()">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+
+    <span class="title">Angualar Project</span>
+
+      <span class="spacer"></span>
+
+      <button mat-icon-button  aria-label="Example icon button with a search icon" >
+      
+        <mat-icon>search</mat-icon>
+      </button>
+
+      <button mat-icon-button  aria-label="Example icon button with a notification icon" >
+      
+        <mat-icon>notifications</mat-icon>
+      </button>
+     
+      <div>
+      <button mat-icon-button  aria-label="Example icon button with a account icon" 
+       [matMenuTriggerFor]="menu">
+       <mat-icon>account_circle</mat-icon>
+       <mat-menu #menu="matMenu">
+        <button mat-menu-item>  <mat-icon>settings</mat-icon> Account Setting</button>
+        <button mat-menu-item> <mat-icon>account_box</mat-icon>Customer View</button>
+        <button mat-menu-item  (click)="logout()">
+          
+         <mat-icon>exit_to_app</mat-icon>Sign Out</button>
+      </mat-menu>
+      </button>
+      {{userdispalyName}}
+      </div>
+
+</mat-toolbar>
+
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened class="example-sidenav"
+    [ngStyle]="{ 'width.em': sidenavWidth }" opened="true" (mouseenter)="increase()"
+      (mouseleave)="decrease()">
+      <div class="logomain">Logo </div>
+    
+
+      
+<mat-nav-list>
+  <!-- Sidebar -->
+  
+  <!-- side menu for dashboard -->
+  <mat-list-item routerLink="dashboard" routerLinkActive="active"  >
+    <mat-icon mat-list-icon>speed</mat-icon>
+    <div fxFlex="10"></div>
+    <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+      <h3 class="lead">Dashboard</h3>
+    </div>
+  </mat-list-item>
+
+  <mat-divider></mat-divider>
+
+  <!-- side menu for sale -->
+  <mat-list-item routerLink="sale" routerLinkActive="active">
+    <mat-icon mat-list-icon>settings</mat-icon>
+    <div fxFlex="10"></div>
+    <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+      <h3 class="lead">Sale</h3>
+    </div>
+  </mat-list-item>
+
+  <mat-divider></mat-divider>
+
+  <!-- side menu for catalog -->
+  <mat-list-item routerLink="catlog" routerLinkActive="active">
+    <mat-icon mat-list-icon>menu_book</mat-icon>
+    <div fxFlex="10"></div>
+    <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+      <h3 class="lead">Catlog</h3>
+    </div>
+  </mat-list-item>
+
+  <mat-divider></mat-divider>
+
+<!-- side menu for customer -->
+  <mat-list-item routerLink="custmor" routerLinkActive="active">
+    <mat-icon mat-list-icon>people</mat-icon>
+    <div fxFlex="10"></div>
+    <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+      <h3 class="lead">Customor</h3>
+    </div>
+  </mat-list-item>
+
+  <mat-divider></mat-divider>
+
+<!-- side menu for marketing -->
+  <mat-list-item routerLink="marketing" routerLinkActive="active">
+    <mat-icon mat-list-icon>local_phone</mat-icon>
+    <div fxFlex="10"></div>
+    <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+      <h3 class="lead">Marketing</h3>
+    </div>
+  </mat-list-item>
+
+  <mat-divider></mat-divider>
+
+<!-- side menu for Content -->
+  <mat-list-item routerLink="content" routerLinkActive="active">
+    <mat-icon mat-list-icon>local_phone</mat-icon>
+    <div fxFlex="10"></div>
+    <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+      <h3 class="lead">Content</h3>
+    </div>
+  </mat-list-item>
+
+  <mat-divider></mat-divider>
+<!-- side menu for report -->
+  <mat-list-item routerLink="report" routerLinkActive="active">
+    <mat-icon mat-list-icon>local_phone</mat-icon>
+    <div fxFlex="10"></div>
+    <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+      <h3 class="lead">Report</h3>
+    </div>
+  </mat-list-item>
+
+  <mat-divider></mat-divider>
+
+  <!-- side menu  for store -->
+
+  <mat-list-item  routerLinkActive="active" (click)='sidenav2.toggle()' >
+    <mat-icon mat-list-icon>store</mat-icon>
+    
+    <div fxFlex="10"></div>
+    <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+      <h3 class="lead">Store</h3>
+    </div>
+  </mat-list-item>
+
+  <mat-divider></mat-divider>
+
+    <!-- side menu for system -->
+
+  <mat-list-item routerLink="system" routerLinkActive="active" >
+    <mat-icon mat-list-icon>settings</mat-icon>
+   
+    <div fxFlex="10"></div>
+    <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+      <h3 class="lead">System</h3>
+    </div>
+  </mat-list-item>
+
+</mat-nav-list>
+
+    </mat-sidenav>
+    
+      <!-- Main content -->
+    <mat-sidenav-content>
+      <mat-sidenav-container fullscreen>
+        <mat-sidenav #sidenav2 mode="over" class="sidenav2">
+          <div class="sidenav-content">
+          <app-sidenav-two></app-sidenav-two>
+          </div>
+        </mat-sidenav>
+        <mat-sidenav-content>
+          
+ <div class="main-content">
+
+ 
+  <router-outlet></router-outlet>
+ </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+
+    </mat-sidenav-content>
+
+      <!-- Above is main content code -->
+  </mat-sidenav-container>

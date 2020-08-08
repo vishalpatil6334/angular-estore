@@ -1,0 +1,49 @@
+
+.example-container {
+    position: absolute;
+    top: 60px;
+    height: calc(100% - 60px);
+    left: 0;
+    right: 0;
+  }
+  
+  .example-sidenav {
+    background-color: #3f51b5;
+  }
+  
+  .example-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+  
+  .mat-list-icon{
+    color: white;
+}
+h3{
+    color: white;
+    padding-top: 17px;
+    margin-left: 20px;
+}
+
+.spacer{
+    flex : 1 1 auto;
+}
+.main-content{
+    padding: 25px;
+   
+}
+.mat-icon-button{
+    color:#3f51b5
+  }
+
+  .sidenav2{
+    max-width: 90%;
+    background-color:#3f51b5 
+  }
+  .sidenav-content{
+    padding: 20px;
+  }
+

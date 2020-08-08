@@ -1,0 +1,132 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar color="primary">Logo
+      
+    </mat-toolbar>
+   
+
+    <mat-nav-list>
+      
+     
+    <mat-list-item [routerLink]="['/dashboard']" routerLinkActive="active">
+      <mat-icon mat-list-icon>speed</mat-icon>
+      <h3>DashBoard</h3>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+       
+    <mat-list-item [routerLink]="['/dashboard']" routerLinkActive="active">
+      <mat-icon mat-list-icon>settings</mat-icon>
+      <h3>Sale</h3>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+    <mat-list-item [routerLink]="['/dashboard']" routerLinkActive="active">
+      <mat-icon mat-list-icon>menu_book</mat-icon>
+      <h3>Catalog</h3>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <mat-list-item [routerLink]="['/dashboard']" routerLinkActive="active">
+      <mat-icon mat-list-icon>people</mat-icon>
+      <h3>Custmor</h3>
+    </mat-list-item>
+
+       <mat-divider></mat-divider>
+
+    <mat-list-item [routerLink]="['/dashboard']" routerLinkActive="active">
+      <mat-icon mat-list-icon>local_phone</mat-icon>
+      <h3>Marketing</h3>
+    </mat-list-item>
+
+       <mat-divider></mat-divider>
+
+    <mat-list-item [routerLink]="['/dashboard']" routerLinkActive="active">
+      <mat-icon mat-list-icon>local_phone</mat-icon>
+      <h3>Content</h3>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <mat-list-item [routerLink]="['/dashboard']" routerLinkActive="active">
+      <mat-icon mat-list-icon>local_phone</mat-icon>
+      <h3>Report</h3>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <mat-list-item  routerLinkActive="active" (click)="sidenav2.toggle()">
+      <mat-icon mat-list-icon>store</mat-icon>
+      <h3>Store</h3>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <mat-list-item [routerLink]="['/dashboard']" routerLinkActive="active">
+      <mat-icon mat-list-icon>settings</mat-icon>
+      <h3>system</h3>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+
+    <mat-toolbar >
+      
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="title">Angualar Project</span>
+
+      <span class="spacer"></span>
+
+      <button mat-icon-button  aria-label="Example icon button with a search icon" >
+      
+        <mat-icon>search</mat-icon>
+      </button>
+
+      <button mat-icon-button  aria-label="Example icon button with a notification icon" >
+      
+        <mat-icon>notifications</mat-icon>
+      </button>
+
+      <button mat-icon-button  aria-label="Example icon button with a account icon" 
+       [matMenuTriggerFor]="menu">
+       <mat-icon>account_circle</mat-icon>
+       <mat-menu #menu="matMenu">
+        <button mat-menu-item>  <mat-icon>settings</mat-icon> Account Setting</button>
+        <button mat-menu-item> <mat-icon>account_box</mat-icon>Customer View</button>
+        <button mat-menu-item> <mat-icon>exit_to_app</mat-icon>Sign Out</button>
+      </mat-menu>
+      </button>
+    </mat-toolbar>
+    
+    
+    <mat-sidenav class="sidenav2"  #sidenav2 mode="over">
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>1</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>3</mat-grid-tile>
+        <mat-grid-tile>4</mat-grid-tile>
+      </mat-grid-list>
+    </mat-sidenav>
+  
+    
+     
+  
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
